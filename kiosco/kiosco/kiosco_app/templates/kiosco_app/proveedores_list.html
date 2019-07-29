@@ -1,0 +1,15 @@
+{% extends 'kiosco_app/base.html' %}
+{% block content %}
+ <div>
+                <a href="{% url 'proveedor_new' %}" class="button"><span class="glyphicon glyphicon-plus"></span> Agregar Proveedor</a>
+
+    </div>
+    {% for proveedor in object_list %}
+        <div class="producto">
+            <h3> <a href=""> {{ proveedor.nombre_prov }}</a></h3>
+            <p>CUIT: {{ proveedor.cuit }}</p>
+            <p>Dirección: {{ proveedor.direccion }}</p>
+            <p>Teléfono: {{ proveedor.telefono }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

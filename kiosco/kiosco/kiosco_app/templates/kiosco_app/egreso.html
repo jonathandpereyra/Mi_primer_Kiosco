@@ -1,0 +1,14 @@
+{% extends 'kiosco_app/base.html' %}
+{% block content %}
+    <div>
+                <a href="{% url 'egresos_nuevo' %}" class="button"><span class="glyphicon glyphicon-plus"></span> Nuevo Egreso </a>
+
+    </div>
+    {% for egreso in object_list %}
+        <div class="producto">
+            <h3> <a href="">{{ egreso.producto }}</a></h3>
+            <p>Egreso:{{ egreso.cantidad }}</p>
+            <p>{{ egreso.fecha }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.contrib import admin
+from .models import Producto, Proveedor, Ingreso, Egreso
 
-# Register your models here.
-from .models import Producto
-
-admin.site.register(Producto)
+admin.site.register(Producto) #permite visualizar los productos en el admin
+admin.site.register(Proveedor)
+admin.site.register(Ingreso)
+admin.site.register(Egreso)

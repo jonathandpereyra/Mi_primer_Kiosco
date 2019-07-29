@@ -1,0 +1,14 @@
+{% extends 'kiosco_app/base.html' %}
+{% block content %}
+    <div>
+                <a href="{% url 'producto_new' %}" class="button"><span class="glyphicon glyphicon-plus"></span> Agregar Producto</a>
+
+    </div>
+    {% for producto in object_list %}
+        <div class="producto">
+            <h3> <a href="">{{ producto.nombre }}</a></h3>
+            <h5>{{ producto.descripcion }}</h5>
+            <p>$ {{ producto.precio_sugerido }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
